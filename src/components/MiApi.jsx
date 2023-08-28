@@ -10,15 +10,18 @@ function MiApi() {
   const [search, setSearch] = useState("");
 
   const getSeries = async () => {
-    const url = 'https://digimon-api.vercel.app/api/digimon';
-    const res = await fetch(url);
-    const data = await res.json();
-    const jsonOrdenado = data.sort((a,b) => a.name.localeCompare(b.name));
 
-    setSeries(jsonOrdenado);
+    const url = 'https://digimon-api.vercel.app/api/digimon';
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      const jsonOrdenado = data.sort((a,b) => a.name.localeCompare(b.name));
+      setSeries(jsonOrdenado);
+    } catch (error) {
+      alert("La API no esta respondiendo")
+    }
   };
 
-  
   const handleChange = (e) => {
     setSearch(e.target.value);
   };

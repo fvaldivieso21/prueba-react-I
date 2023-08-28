@@ -1,0 +1,24 @@
+.list-group-item {
+
+color: white !important;
+font-size: 22px;
+font-weight: 500;
+}
+
+.rookie {
+    background-color: green !important;
+}
+
+.default {
+    background-color: blue !important;
+}
+.card {
+
+    width: 18rem !important;
+    border: 2px solid black !important;
+}
+
+.card-title {
+    text-align: center !important;
+    font-size: 24px !important;
+}

@@ -3,3 +3,7 @@
     margin: 20px;
     width: 200px;
 }
+
+input {
+    border:2px solid black !important;
+}
